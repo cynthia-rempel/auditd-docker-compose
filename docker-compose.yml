@@ -1,0 +1,14 @@
+version: "2"
+
+services:
+  auditd.service:
+    build:
+      context: ./audit
+    cap_add:
+      - AUDIT_READ
+      - AUDIT_CONTROL
+#    cap_drop:
+#      - ALL
+    command: auditd -f
+    image: auditd:2.8.4-4.el7
+    pid: "host"
