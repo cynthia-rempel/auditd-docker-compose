@@ -1,8 +1,10 @@
 # auditd-docker-compose
 Container for building/running auditd using docker-compose
 
-# Capabilities
-The Audit Read and Audit Control are required for auditd to work
+# Required Capabilities
+Audit Read
+
+Audit Control
 
 # PID = Host
 The pid = host option is required for local logging within a container
@@ -12,6 +14,7 @@ Recommend that audit.rules and auditd.conf are bind-mounted using a read-only op
 
 # To Build and Run:
 From the directory with the docker-compose.yml run
+
 sudo docker-compose up --build
 
 # To Run:
